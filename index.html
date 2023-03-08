@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Hello, world!</title>
+  </head>
+  <style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .filters ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .input-group-text{
+        background-color: white;
+    }
+    input{
+        border-radius: 5px !important;
+        font-size:12px !important;
+    }
+    label{
+        font-size: 13px !important;
+        font-weight: 500;
+    }
+    select{
+        border-radius: 5px !important;
+        font-size:12px !important;
+    }
+   #search{
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+   }
+   #sel1{
+    width:210px;
+   }
+   select.input-lg {
+    appearance: none;
+   
+  }
+  select + img.fa {
+    float: right;
+    margin-top: -23px;
+    margin-right: 1px;
+    background-color: #fff;
+    padding-right: 5px;
+  }
+  ul{
+    padding-left: 13px !important;
+  }
+  .cheading{
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+  #col1{
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .t1 tr th{
+    font-size: 12px;
+  }
+  .t1 tr td{
+    font-size: 12px;
+  }
+  .table_filters ul{
+    padding-left: 10px !important;
+  }
+  .form_part{
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+  #row1{
+    border-bottom: 0px !important;
+  }
+  .input-lg:focus{
+    border-color: #aaa !important;
+    color: black;
+    box-shadow:none;
+    outline: none;
+  }
+  #table-filters:focus{
+    border-color: #aaa !important;
+    color: black;
+    box-shadow:none;
+    outline: none;
+  }
+  #search:focus{
+    border-color: #aaa !important;
+    color: black;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    outline: none;
+  }
+  option:checked{
+    background-color: #bcb4e0;
+    color: purple;
+  }
+  select option{
+    background:#fff;
+    color:#000;
+  }
+  .align_right{
+    margin-right: auto;
+  }
+  .remove_border{
+    border: none !important;
+    border: hidden !important;
+  }
+  .table tr:hover{
+    background-color: #efeef3;
+  }
+  #border-bottom{
+    border-bottom: 1px solid gray !important;
+  }
+  #row1{
+    border-top: 1px solid gray !important;
+  }
+  a:active {
+    border-bottom:3px solid #6461d1;
+    color:#6461d1 !important;
+
+ }
+ a:hover{
+    border-bottom:3px solid #6461d1;
+    color:#6461d1 !important;
+ }
+ #float-right{
+    float: right;
+ }
+ @media (max-width:991px){
+    #float-right{
+        float: none;
+    }
+ }
+ .table thead th{
+    border-bottom: none;
+ }
+ .table td, .table th{
+    border-top: none;
+ }
+ .table-row{
+    border-top:1px solid rgb(222, 219, 219);
+    border-bottom: 1px solid rgb(213, 213, 213);
+ }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+        $("#addon1").click(function(){
+            $("#search").css({"background-color":"#bcb4e0","color":"purple"})
+        })
+        $(".form-control").on("change", function(){
+            if($(this).val()){
+                $(this).css({"color":"purple", "background-color":"#bcb4e0"})
+            }
+        })
+       
+    });
+
+
+  </script>
+  <body>
+    <div class="container mt-5">
+        <h3 class="">Articles List</h3>
+        <h6>Find below the list of articles</h6>
+        <form action="" >
+            <div class="row f1 mt-5">
+                <div class="filters">
+
+                    <ul class="d-inline-block" style="list-style-type: none;">
+                        <li class="d-inline-block">
+                            <div class="mr-3 mb-3">
+                                <div class="form-group">
+                                  <label for="Job Profile">Job Profile</label>
+                                  
+                                    <select class="form-control input-lg"  id="sel1" name="sellist1" >
+                                        
+                                   
+                                        <option value="Select Job Profile">Select Job Profile</option>
+                                        <option value="Associate Recruiter">Associate Recruiter</option>
+                                        <option value="Backend Software Developer">Backend Software Developer</option>
+                                        <option value="Creative Socail Media Folks">Creative Socail Media Folks</option>
+                                        <option value="Select Job Profile">Crpto Price Prediction Writer</option>
+                                        <option value="Select Job Profile" >Digital Content Writer</option>
+                                        <option value="Select Job Profile">Front End Developer</option>
+                                       
+                                  </select>
+                                  <img class="fa" src="up-and-down-arrow.png" alt="">
+                                 
+                                 
+                                </div>
+        
+                        </div>
+                        </li>
+                  
+                     <li class="d-inline-block">
+                        <div class="mr-3 mb-3">
+                            <div class="form-group">
+                              <label for="Experience">Experience</label>
+                              <select class="form-control input-lg" style="width:160px" id="sel2" name="sellist1" >
+                                <option>Select Experience</option>
+                                <option>Fresher</option>
+                                <option>0 year</option>
+                                <option>1 year</option>
+                              </select>
+                              <img class="fa" src="up-and-down-arrow.png" alt="">
+                             
+                            </div>
+        
+                    </div>
+                     </li>
+                     
+                     <li class="d-inline-block"> 
+                        <div class="mr-3 mb-3">
+                            <div class="form-group">
+                              <label for="Label">Label</label>
+                              <select class="form-control input-lg" style="width:130px" id="sel3" name="sellist1" >
+                                <option>Select Label</option>
+                                <option>Pending</option>
+                                <option>Approved</option>
+                                <option>Rejected</option>
+                              </select>
+                              <img class="fa" src="up-and-down-arrow.png" alt="">
+                            </div>
+            
+                       </div>
+    
+                     </li>
+    
+               
+                  <li class="d-inline-block">
+                    <div class="mr-3 mb-3">
+                        <div class="form-group">
+                          <label for="stage">Stage</label>
+                          <select class="form-control input-lg" style="width:160px" id="sel4" name="sellist1" >
+                            <option>Select Stage</option>
+                            <option>Technical round</option>
+                            <option>1st round/Shortlisted</option>
+                            <option>Hired/Onboarding</option>
+                          </select>
+                          <img class="fa" src="up-and-down-arrow.png" alt="">
+                          
+                         
+                        </div>
+            
+                    </div>
+                  </li>
+               
+             <li class="d-inline-block">
+                <div class="mr-3 mb-3">
+                    <div class="form-group">
+                      <label for="junior">Junior Recruiter</label>
+                      <select class="form-control input-lg" style="width:180px" id="sel5" name="sellist1" >
+                        <option>Select Junior Recruiter</option>
+                        <option>Junior Recruiter</option>
+                        <option>Associate Recruiter</option>
+                       
+                      </select>
+                      <img class="fa" src="up-and-down-arrow.png" alt="">
+                     
+                    </div>
+        
+                </div>
+             </li>
+           
+            <li class="d-inline-block"  >
+                <div class="mr-3 mb-3" >
+                    <div class="form-group">
+                      <label for="search">Search</label>
+                      <div class="input-group mb-3">
+                        <input id="search" type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="addon1">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg>
+                          </span>
+                        </div>
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="addon1">
+                                <svg  xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                  </svg>
+                            </span>
+                          </div>
+                      </div>
+                    
+                     
+                    </div>
+        
+                </div>
+            </li>
+            
+             </ul>
+            
+              
+                </div>
+               
+            </div>
+        </form>
+      <!-- table -->
+
+      <div class="collapsible_table" style="border-left:4px solid #6461d1">
+        <div class="card">
+            <div class="card-body cheading" data-toggle="collapse" data-target="#col1" aria-expanded="false" aria-controls="collapseExample">
+                Team Reports Overview
+            </div>
+        </div>
+
+      </div>
+
+      <div class="collapse" id="col1">
+        <div class="links mb-4 mt-2 mx-auto">
+            <a style="text-decoration:none;color:black;font-weight:bold;font-size:12px;margin-right:5px;margin-top:25px;" href="#">Team Members</a>
+            <a style="text-decoration:none;color:black;font-weight:bold;font-size:12px;margin-right:5px;" href="#">Employee Monthly Reports</a>
+         </div>
+
+       
+         
+
+         <div class="border" style="border-radius:5px">
+         <div class=" px-3 pt-2"  >
+         <form action="" >
+            <div class="f1">
+                <div class="filters1">
+
+                    <ul class="" style="list-style-type: none;">
+                        <li class="d-inline-block">
+                            <div class="mr-3 ">
+                                <div class="form-group">
+                                  <label for="Job Profile">Month</label>
+                                  
+                                    <select class="form-control" id="table-filters" name="sellist1" >
+                                        
+                                   
+                                        <option value="Select Month">January</option>
+                                        <option value="Associate Recruiter">February</option>
+                                        <option value="Backend Software Developer">March</option>
+                                        <option value="Creative Socail Media Folks">April</option>
+                    
+                                       
+                                  </select>
+                                 
+                                 
+                                 
+                                </div>
+        
+                        </div>
+                        </li>
+                  
+                    
+                   
+    
+               
+                 
+             <li class="d-inline-block">
+                <div class="mr-3 ">
+                    <div class="form-group">
+                      <label for="junior">Employee</label>
+                      <select class="form-control" id="table-filters"   id="sel5" name="sellist1" >
+                        <option>Select Employee</option>
+                        <option>Junior Recruiter</option>
+                        <option>Associate Recruiter</option>
+                       
+                      </select>
+                    
+                     
+                    </div>
+        
+                </div>
+             </li>
+           
+            <li class="d-inline-block" id="float-right"> 
+                <div class="mr-3">
+                    <div class="form-group">
+                      <label for="search">Search</label>
+                      <div class="input-group mb-3">
+                        <input id="search" type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="addon1">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg>
+                          </span>
+                        </div>
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="addon1">
+                                <svg  xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                  </svg>
+                            </span>
+                          </div>
+                      </div>
+                    
+                     
+                    </div>
+        
+                </div>
+            </li>
+            
+             </ul>
+            
+              
+                </div>
+               
+            </div>
+        </form>
+    </div>
+   
+
+          
+        
+
+       
+
+        
+
+      
+         <div class="table-responsive">
+        <table class="table t1" >
+            <thead>
+              <tr class="table-row" >
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="row1" class="t1">
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr class="t1">
+                <th scope="row" >2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr class="t1">
+                <th scope="row" >3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+              <tr class="t1">
+                <th scope="row" >3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+</div>
+
+    
+    
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
